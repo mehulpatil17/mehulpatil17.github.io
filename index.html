@@ -4,15 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mehul Patil | Portfolio</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background: radial-gradient(circle at top, #0f2027, #203a43, #000);
       color: white;
+      overflow-x: hidden;
     }
 
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    nav h2 { font-size: 1.2rem; }
+
+    /* HERO */
     header {
       height: 100vh;
       display: flex;
@@ -23,115 +43,183 @@
     }
 
     header h1 {
-      font-size: 3.2rem;
-      font-weight: 600;
+      font-size: 3.5rem;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     header p {
       margin-top: 10px;
       font-size: 1.2rem;
-      opacity: 0.9;
+      opacity: 0.85;
     }
 
     .btn {
       margin-top: 25px;
       padding: 12px 25px;
+      border-radius: 30px;
       border: none;
-      border-radius: 25px;
-      background: white;
-      color: #2c5364;
-      font-weight: bold;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: white;
       cursor: pointer;
       transition: 0.3s;
     }
 
-    .btn:hover {
-      transform: scale(1.08);
-    }
+    .btn:hover { transform: scale(1.1); }
 
+    /* SECTIONS */
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      padding: 80px 20px;
+      max-width: 1100px;
       margin: auto;
     }
 
+    h2 { margin-bottom: 20px; }
+
+    /* CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
     .card {
-      background: rgba(255, 255, 255, 0.08);
       padding: 25px;
-      border-radius: 15px;
-      margin: 20px 0;
-      backdrop-filter: blur(12px);
-      transition: 0.3s;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(15px);
+      transition: 0.4s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 0 25px rgba(0,198,255,0.3);
     }
 
-    h2 {
-      margin-bottom: 10px;
+    /* PROJECT */
+    .project h3 { margin-bottom: 10px; }
+
+    .project-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      border-radius: 20px;
+      background: white;
+      color: black;
+      text-decoration: none;
+      font-weight: 600;
     }
 
-    ul {
-      padding-left: 20px;
+    /* SKILLS */
+    .skills span {
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+      font-size: 0.9rem;
     }
 
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 20px;
-      opacity: 0.7;
+      padding: 30px;
+      opacity: 0.6;
+    }
+
+    /* ANIMATION */
+    .fade {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.8s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
 
+<nav>
+  <h2>Mehul</h2>
+</nav>
+
 <header>
-  <h1>Hi, I'm Mehul Patil 👋</h1>
-  <p>🎓 B.Tech @ IIT Gandhinagar | AI</p>
-  <p>💻 Student | 🌱 Learning AI/ML | 🚀 Building cool projects</p>
+  <h1>Mehul Patil 👋</h1>
+  <p>B.Tech @ IIT Gandhinagar | AI</p>
+  <p>AI/ML • Builder • Student</p>
   <button class="btn" onclick="scrollToSection()">Explore</button>
 </header>
 
-<section id="about">
+<section id="about" class="fade">
+  <h2>About Me</h2>
   <div class="card">
-    <h2>About Me</h2>
-    <p>I am a passionate student focused on Artificial Intelligence and Machine Learning. I enjoy building practical projects and exploring new technologies.</p>
+    I am an AI-focused student who enjoys building real-world systems, exploring ML engineering, and working with modern APIs.
   </div>
+</section>
 
-  <div class="card">
-    <h2>Skills & Technologies</h2>
-    <ul>
-      <li>Python</li>
-      <li>TensorFlow</li>
-      <li>Gemini API</li>
-      <li>OpenAI API</li>
-      <li>Google Cloud API</li>
-    </ul>
+<section class="fade">
+  <h2>Skills</h2>
+  <div class="card skills">
+    <span>Python</span>
+    <span>TensorFlow</span>
+    <span>OpenAI API</span>
+    <span>Gemini API</span>
+    <span>Google Cloud</span>
   </div>
+</section>
 
-  <div class="card">
-    <h2>Featured Projects</h2>
-    <div class="project">
+<section class="fade">
+  <h2>Featured Projects</h2>
+  <div class="grid">
+    <div class="card project">
       <h3>🚀 STT-AI Course Work</h3>
-      <p>Complete coursework for AI/ML engineering including labs, assignments, and real-world ML system building.</p>
-      <a href="https://github.com/mehulpatil17/STT-AI" target="_blank" class="project-btn">View Repository</a>
+      <p>Complete AI engineering coursework including ML pipelines and deployment.</p>
+      <a href="https://github.com/mehulpatil17/STT-AI" target="_blank" class="project-btn">View Repo</a>
     </div>
   </div>
+</section>
 
-  <div class="card">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
+<section class="fade">
+  <h2>GitHub Stats</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://github-readme-stats.vercel.app/api?username=mehulpatil17&show_icons=true&theme=tokyonight" width="100%">
+    </div>
+
+    <div class="card">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=mehulpatil17&theme=tokyonight" width="100%">
+    </div>
+
+    <div class="card">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mehulpatil17&layout=compact&theme=tokyonight" width="100%">
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Mehul Patil | Built with ❤️</p>
+  © 2026 Mehul Patil
 </footer>
 
 <script>
-  function scrollToSection() {
-    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-  }
+function scrollToSection() {
+  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Scroll animation
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add('show');
+    }
+  });
+});
 </script>
 
 </body>
