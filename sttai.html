@@ -16,15 +16,48 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 10px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 15px;
     }
 
     .card {
       background: rgba(255,255,255,0.05);
       padding: 25px;
       border-radius: 15px;
-      margin-top: 20px;
+      margin-top: 15px;
+      backdrop-filter: blur(10px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .box {
+      background: rgba(255,255,255,0.06);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding: 10px;
+      text-align: left;
     }
 
     a {
@@ -39,30 +72,82 @@
       background: white;
       color: black;
       border-radius: 20px;
+      font-weight: 600;
     }
   </style>
 </head>
 
 <body>
 
-<h1>🚀 STT-AI Project</h1>
+<h1>🚀 STT-AI</h1>
+<p>AI/ML Engineering Coursework @ IIT Gandhinagar</p>
+
+<a href="https://github.com/mehulpatil17/STT-AI" target="_blank" class="btn">
+  View GitHub Repo
+</a>
 
 <div class="card">
-  <p>This repository contains complete AI/ML engineering coursework.</p>
-
-  <ul>
-    <li>Data Collection & Processing</li>
-    <li>Model Training (scikit-learn / PyTorch)</li>
-    <li>LLM Integration</li>
-    <li>Deployment & MLOps</li>
-  </ul>
-
-  <a href="https://github.com/mehulpatil17/STT-AI" target="_blank" class="btn">
-    View GitHub Repo
-  </a>
+  <p>
+    This project covers the <b>complete AI/ML engineering stack</b> — from data collection to deployment.
+  </p>
 </div>
 
-<p style="margin-top:30px;">
+---
+
+<h2>🧠 What You'll Learn</h2>
+
+<div class="grid">
+  <div class="box"><b>Data Engineering</b><br>APIs, scraping, validation, labeling</div>
+  <div class="box"><b>Labeling at Scale</b><br>Active learning, weak supervision</div>
+  <div class="box"><b>Model Development</b><br>Training, AutoML, fine-tuning</div>
+  <div class="box"><b>LLM Integration</b><br>Prompting, APIs, multimodal apps</div>
+  <div class="box"><b>MLOps</b><br>Docker, DVC, MLflow</div>
+  <div class="box"><b>Deployment</b><br>FastAPI, Streamlit</div>
+</div>
+
+---
+
+<h2>📚 Weekly Labs</h2>
+
+<div class="card">
+<table>
+<tr>
+  <th>Week</th>
+  <th>Topic</th>
+  <th>Lab</th>
+</tr>
+
+<tr><td>1</td><td>Data Collection</td><td><a href="LABS/Week%201/week01-data-collection-lab.ipynb">Open</a></td></tr>
+<tr><td>2</td><td>Data Validation</td><td><a href="LABS/Week%202/week02-data-validation-lab.ipynb">Open</a></td></tr>
+<tr><td>3</td><td>Data Labeling</td><td><a href="LABS/Week%203/week03-data-labeling-lab.ipynb">Open</a></td></tr>
+<tr><td>4</td><td>Optimizing Labeling</td><td><a href="LABS/Week%204/week04-optimizing-labeling-lab.ipynb">Open</a></td></tr>
+<tr><td>5</td><td>Data Augmentation</td><td><a href="LABS/Week%205/week05-data-augmentation-lab.ipynb">Open</a></td></tr>
+<tr><td>6</td><td>LLM APIs</td><td><a href="LABS/Week%206/week06-llm-apis-lab.ipynb">Open</a></td></tr>
+</table>
+</div>
+
+---
+
+<h2>📝 Assignments</h2>
+
+<div class="card">
+<table>
+<tr>
+  <th>Assignment</th>
+  <th>Topic</th>
+</tr>
+
+<tr><td>1</td><td>Data Collection</td></tr>
+<tr><td>2</td><td>Data Validation</td></tr>
+<tr><td>3</td><td>Data Labeling</td></tr>
+<tr><td>4</td><td>Optimizing Labeling</td></tr>
+
+</table>
+</div>
+
+---
+
+<p style="margin-top:40px;">
   <a href="index.html">⬅ Back to Home</a>
 </p>
 
