@@ -1,7 +1,45 @@
 body {
-    font-family: Arial;
-    margin: 40px;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
 }
+
+header {
+  text-align: center;
+  padding: 100px 20px;
+}
+
 h1 {
-    color: #333;
+  font-size: 3rem;
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.project-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: white;
+  color: #2c5364;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
 }
