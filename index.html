@@ -1,10 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mehul Patil | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background: white;
+      color: #2c5364;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 25px;
+      border-radius: 15px;
+      margin: 20px 0;
+      backdrop-filter: blur(12px);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hi, I am Mehul</h1>
-    <p>This is my personal website.</p>
+
+<header>
+  <h1>Hi, I'm Mehul Patil 👋</h1>
+  <p>🎓 B.Tech @ IIT Gandhinagar | AI</p>
+  <p>💻 Student | 🌱 Learning AI/ML | 🚀 Building cool projects</p>
+  <button class="btn" onclick="scrollToSection()">Explore</button>
+</header>
+
+<section id="about">
+  <div class="card">
+    <h2>About Me</h2>
+    <p>I am a passionate student focused on Artificial Intelligence and Machine Learning. I enjoy building practical projects and exploring new technologies.</p>
+  </div>
+
+  <div class="card">
+    <h2>Skills & Technologies</h2>
+    <ul>
+      <li>Python</li>
+      <li>TensorFlow</li>
+      <li>Gemini API</li>
+      <li>OpenAI API</li>
+      <li>Google Cloud API</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Featured Projects</h2>
+    <ul>
+      <li><b>STT-AI Course Work</b> – Speech-to-text and AI based learning project</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Email: your@email.com</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Mehul Patil | Built with ❤️</p>
+</footer>
+
+<script>
+  function scrollToSection() {
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
 </body>
 </html>
