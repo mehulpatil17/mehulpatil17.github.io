@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositories | Mehul Patil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">About Me</a>
+        <a href="repos.html" class="active">Repositories</a>
+    </nav>
+
+    <main>
+        <h1 style="text-align: center; margin-bottom: 2rem; font-size: 3rem;">My <span style="color: var(--primary)">Repositories</span></h1>
+        
+        <div id="loader" class="loader">Fetching repositories from GitHub...</div>
+        <div id="repo-container" class="repo-grid"></div>
+    </main>
+
+    <script>
+        const username = 'mehulpatil17';
+        const repoContainer = document.getElementById('repo-container');
+        const loader = document.getElementById('loader');
+
+        fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
+            .then(response => response.json())
+            .then(repos => {
+                loader.style.display = 'none';
+                repos.forEach(repo => {
+                    const card = document.createElement('div');
+                    card.className = 'repo-card';
+                    
+                    const description = repo.description || 'No description provided.';
+                    const language = repo.language || 'Markdown';
+                    
+                    card.innerHTML = `
+                        <h3>${repo.name}</h3>
+                        <p>${description}</p>
+                        <div class="repo-meta">
+                            <span>🔵 ${language}</span>
+                            <span>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</span>
+                        </div>
+                        <a href="${repo.html_url}" target="_blank" class="repo-link">View Code</a>
+                    `;
+                    repoContainer.appendChild(card);
+                });
+            })
+            .catch(error => {
+                loader.innerText = 'Failed to load repositories. Please try again later.';
+                console.error('Error fetching repos:', error);
+            });
+    </script>
+</body>
+</html>

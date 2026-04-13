@@ -1,212 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mehul Patil | Portfolio</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top, #0f2027, #203a43, #000);
-      color: white;
-    }
-
-    /* NAVBAR */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(0,0,0,0.4);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    nav a:hover { opacity: 0.7; }
-
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3.5rem;
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      opacity: 0.85;
-    }
-
-    .btn {
-      margin-top: 25px;
-      padding: 12px 25px;
-      border-radius: 30px;
-      border: none;
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
-      color: white;
-      cursor: pointer;
-    }
-
-    section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      padding: 25px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(15px);
-      transition: 0.4s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 25px rgba(0,198,255,0.3);
-    }
-
-    .project-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      border-radius: 20px;
-      background: white;
-      color: black;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      opacity: 0.6;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehul Patil | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav>
+        <a href="index.html" class="active">About Me</a>
+        <a href="repos.html">Repositories</a>
+    </nav>
 
-<nav>
-  <div><b>Mehul Patil</b></div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#stats">Stats</a>
-    <a href="sttai.html">STT-AI</a>
-  </div>
-</nav>
+    <main>
+        <section class="hero">
+            <h1>Hi, I'm Mehul Patil</h1>
+            <p>Welcome to my digital space. I build software, explore new technologies, and love turning ideas into reality through code.</p>
+        </section>
 
-<header>
-  <h1>Mehul Patil 👋</h1>
-  <p>B.Tech @ IIT Gandhinagar | AI</p>
-  <button class="btn" onclick="document.getElementById('about').scrollIntoView()">Explore</button>
-</header>
-
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card">AI/ML student building real-world projects.</div>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>🚀 STT-AI</h3>
-      <p>AI coursework + ML engineering pipeline.</p>
-      <a href="sttai.html" class="project-btn">Open Page</a>
-    </div>
-  </div>
-</section>
-
-<section id="stats">
-  <h2>GitHub Stats</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://github-readme-stats.vercel.app/api?username=mehulpatil17&show_icons=true&theme=tokyonight" width="100%">
-    </div>
-    <div class="card">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=mehulpatil17&theme=tokyonight" width="100%">
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2026 Mehul Patil
-</footer>
-
-</body>
-</html>
-
-
-<!-- CREATE THIS NEW FILE: sttai.html -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>STT-AI Project</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: Poppins;
-      background: #0f2027;
-      color: white;
-      padding: 40px;
-    }
-
-    a { color: #00c6ff; }
-  </style>
-</head>
-<body>
-
-<h1>🚀 STT-AI Project</h1>
-
-<p>This project contains complete coursework of AI/ML engineering.</p>
-
-<ul>
-  <li>Data Collection</li>
-  <li>Model Training</li>
-  <li>LLM Integration</li>
-  <li>Deployment</li>
-</ul>
-
-<p>
-👉 <a href="https://github.com/mehulpatil17/STT-AI">View GitHub Repo</a>
-</p>
-
-<p>
-<a href="index.html">⬅ Back to Home</a>
-</p>
-
+        <div style="background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+            <h2 style="margin-bottom: 1rem; color: var(--secondary);">About Me</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                I am a passionate developer who enjoys working on diverse projects. My GitHub is a reflection of my learning journey, experiments, and contributions to the open-source community.
+            </p>
+            <p style="color: var(--text-muted);">
+                Feel free to explore my work in the <a href="repos.html" style="color: var(--primary); text-decoration: none;">Repositories</a> section where all my GitHub projects are dynamically listed!
+            </p>
+        </div>
+    </main>
 </body>
 </html>
